@@ -26,29 +26,28 @@ public class Rutas extends Nomal_Vip {
     public String getCuidad() {
         return cuidad;
     }
-
-    public void rutasterrestre(){
-        if(opcionrutas == "QuitoGuayaquil"){
-            pasaje=20+getRecargo();
+    @Override
+    public double calcular(){
+        if(opcionrutas == "Quito-Guayaquil"){
+            pasaje=20+(20*getRecargo());
             cuidad="•Quito-Guayaquil ";
         }
         if(opcionrutas=="Quito-Puyo"){
-            pasaje=15+getRecargo();
+            pasaje=15+(15*getRecargo());
             cuidad="Quito-Puyo ";
         }
         if(opcionrutas=="Quito-Tulcan"){
-            pasaje=17.50+getRecargo();
+            pasaje=17.50+(17.50*getRecargo());
             cuidad="•Quito-Tulca ";
         }
         if(opcionrutas=="Quito-Riobamba"){
-            pasaje=17.50+getRecargo();
+            pasaje=17.50*(17.50*getRecargo());
             cuidad="•Quito-Riobamba ";
         }
-
+        return pasaje;
     }
 
-    @Override
     public void mostrainformacionp(){
-        System.out.print("ID:"+getId()+"Nombre pasajero:"+getNombre()+"Numero de Ticket:"+getNumeroticket()+"Fecha Ticket:"+getFecha_mes()+"Rutas :"+getCuidad()+"Total:"+getPasaje());
+        System.out.print("ID :"+getId()+"  Nombre pasajero: "+getNombre()+"  Numero de Ticket:  "+getNumeroticket()+"  Fecha Ticket : "+getFecha_mes()+"  Rutas :  "+getCuidad()+"  Total:  "+getPasaje());
     }
 }

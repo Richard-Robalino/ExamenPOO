@@ -23,7 +23,7 @@ public class Nomal_Vip extends Ticket {
 
     public double normalovip(){
         if (normal){
-            recargo=0;
+            recargo=1;
         }
         if (vip){
             recargo=0.30;
